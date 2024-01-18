@@ -1,10 +1,15 @@
-years = input("enter the year: ")
+years = 0
 
-if len(years) != 4:
-    print("Invalid Year")
-else:
-    years = int(years)
-    if years%4 == 0:
-        print("leap year")
+while True:
+    years = input("enter the year: ")
+    if len(years) == 4:
+        break
     else:
-        print("not leap")
+        print("invalid year")
+years = int(years)
+if (years%4 == 0 and years%100 != 0):
+    print("leap year")
+elif years%400 == 0:
+    print("Leap year")
+else:
+    print("not leapyear")
